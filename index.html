@@ -677,6 +677,27 @@ document.querySelectorAll(
 
 });
 
+const mobileMenu = document.getElementById('mobileMenu');
+let menuOpened = false;
+
+mobileMenu.addEventListener('shown.bs.offcanvas', () => {
+  if(!menuOpened){
+    history.pushState( {mobileMenu:true }, '');
+    menuOpened = true;
+  }
+});
+
+mobileMenu.addEventListener('hidden.bs.offcanvas', () => {
+  menuOpened = false;
+});
+
+window.addEventListener('popstate', () => {
+  const offcanvas = bootstrap.Offcanvas.getInstance(mobileMenu);
+  if(offcanvas){
+  offcanvas.hide();
+  }
+});
+
 </script>
 
 </html>
