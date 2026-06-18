@@ -17,6 +17,49 @@ body{
   overscroll-behavior: none;
 }
 
+/* =========================
+   sticky-wa
+========================= */
+
+.sticky-wa {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: #25D366;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 999px;
+
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+  opacity: 0;
+  transform: translateY(18px);
+  pointer-events: none;
+
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.sticky-wa.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+@media (min-width: 992px) {
+  .sticky-wa {
+    display: none;
+  }
+}
 
 /* =========================
    NAVBAR
@@ -232,7 +275,10 @@ body{
 }
 
 .hero{
-  min-height:100dvh;
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
 
   display:flex;
   align-items:center;
@@ -294,15 +340,15 @@ body{
 }
 
 .hero-buttons{
-  margin-left: auto;
-  margin-right: auto;
   margin-top:1.5rem;
   display:flex;
-  gap:1rem;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
 .btn-shop{
-  background:#714013;
+  background:linear-gradient(135deg,#b8862b,#714013);
   color:white;
 
   padding:.8rem 1.5rem;
@@ -311,18 +357,18 @@ body{
   border-radius:8px;
 }
 
-.btn-contact{
-  border:1px solid white;
-  color:white;
-
+.btn-hero{
+  border:1px solid rgba(255,255,255,.4);
+  background:rgba(37,211,102,.12);
+  backdrop-filter: blur(6px);
   padding:.8rem 1.5rem;
-
+  color:white;
   text-decoration:none;
   border-radius:8px;
 }
 
 .btn-shop,
-.btn-contact{
+.btn-hero{
 
   transition:
   transform .3s,
@@ -331,7 +377,7 @@ body{
 }
 
 .btn-shop:hover,
-.btn-contact:hover{
+.btn-hero:hover{
 
   transform:translateY(-3px);
 
@@ -792,7 +838,7 @@ body{
   }
 
   .btn-shop,
-  .btn-contact{
+  .btn-hero{
 
     width:100%;
     text-align:center;

@@ -1,3 +1,24 @@
+//STICKY WHATSAPP
+window.addEventListener("DOMContentLoaded", () => {
+  const stickyWA = document.querySelector(".sticky-wa");
+
+  if (!stickyWA) return;
+
+  function toggleSticky() {
+    const scrollY = window.scrollY;
+
+    if (scrollY > 700) {
+      stickyWA.classList.add("show");
+    } else {
+      stickyWA.classList.remove("show");
+    }
+  }
+
+  window.addEventListener("scroll", toggleSticky, { passive: true });
+
+  toggleSticky(); // biar langsung sinkron saat refresh
+});
+
 // NAVBAR SCROLL EFFECT
 const navbar = document.getElementById("mainNavbar");
 
@@ -107,4 +128,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       block: "start"
     });
   });
+});
+
+// TRACKING WHATSAPP BUTTON CLICK
+document.getElementById("stickyWa").addEventListener("click", function () {
+  
+  // Google Analytics event
+  if (typeof gtag !== "undefined") {
+    gtag("event", "click_whatsapp_sticky", {
+      event_category: "conversion",
+      event_label: "sticky_button"
+    });
+  }
+
+  console.log("WA Sticky clicked");
 });
