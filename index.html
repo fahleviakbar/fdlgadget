@@ -49,10 +49,22 @@
       content="https://fdlgadget.id/img/og-image.jpg"
     />
 
+    <link
+      rel="preload"
+      as="image"
+      href="img/webp/hero.webp"
+      fetchpriority="high"
+    />
+
     <!-- Preconnect -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Favicons -->
     <link
@@ -81,11 +93,6 @@
     <link rel="manifest" href="img/favicon/site.webmanifest?v=20260615" />
 
     <!-- Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    />
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
       rel="stylesheet"
@@ -239,7 +246,7 @@
     <nav class="navbar navbar-expand-lg fixed-top transparent" id="mainNavbar">
       <div class="container">
         <!-- Logo -->
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="#hero">
           <img
             src="img/webp/logo.webp"
             width="38"
@@ -300,7 +307,6 @@
             height="38"
             alt="FDL Gadget"
           />
-
           <span>FDL STORE</span>
         </div>
 
@@ -355,7 +361,7 @@
 
     <main>
       <!-- Hero -->
-      <section class="hero">
+      <section id="hero" class="hero">
         <div class="hero-content">
           <h1><b>FDL STORE</b></h1>
           <p>
@@ -424,12 +430,18 @@
                 <img
                   loading="lazy"
                   src="img/webp/tokped1.webp"
+                  width="386"
+                  height="386"
                   alt="Vivo X300 Basic"
                 />
-                <h5>Vivo X300 Basic</h5>
+                <h5 class="product-h5">Vivo X300 Basic</h5>
                 <p>Rp 12.860.000</p>
-                <a href="https://tk.tokopedia.com/ZSXQ1dTKv/"
-                  ><i class="fa-solid fa-store"></i> Buy on Tokopedia</a
+                <a href="https://tk.tokopedia.com/ZSXQ1dTKv/">
+                  <img
+                    src="img/svg/tokopedia.svg"
+                    class="tokopedia-icon"
+                    alt="Tokopedia Icon"
+                  />Buy on Tokopedia</a
                 >
               </div>
             </div>
@@ -439,12 +451,22 @@
                 <img
                   loading="lazy"
                   src="img/webp/tokped2.webp"
+                  width="386"
+                  height="386"
                   alt="Huawei Mate XT"
                 />
-                <h5>Huawei Mate XT</h5>
+                <h5 class="product-h5">Huawei Mate XT</h5>
                 <p>Rp 36.800.000</p>
-                <a href="https://tk.tokopedia.com/ZSQ58M5pt/"
-                  ><i class="fa-solid fa-store"></i> Buy on Tokopedia</a
+                <a
+                  href="https://tk.tokopedia.com/ZSQ58M5pt/"
+                  class="tokpedia-link"
+                >
+                  <img
+                    src="img/svg/tokopedia.svg"
+                    class="tokopedia-icon"
+                    alt="Tokopedia Icon"
+                  />
+                  Buy on Tokopedia</a
                 >
               </div>
             </div>
@@ -454,12 +476,18 @@
                 <img
                   loading="lazy"
                   src="img/webp/tokped3.webp"
+                  width="386"
+                  height="386"
                   alt="Iphone 16 Promax"
                 />
-                <h5>iPhone 16 Promax</h5>
+                <h5 class="product-h5">iPhone 16 Promax</h5>
                 <p>Rp 19.160.000</p>
-                <a href="https://tk.tokopedia.com/ZSXxoBAe9/"
-                  ><i class="fa-solid fa-store"></i> Buy on Tokopedia</a
+                <a href="https://tk.tokopedia.com/ZSXxoBAe9/">
+                  <img
+                    src="img/svg/tokopedia.svg"
+                    class="tokopedia-icon"
+                    alt="Tokopedia Icon"
+                  />Buy on Tokopedia</a
                 >
               </div>
             </div>
@@ -471,10 +499,15 @@
                   src="img/webp/tokped4.webp"
                   alt="Samsung Galaxy S23 Ultra 1 TB"
                 />
-                <h5>Samsung Galaxy S23 Ultra</h5>
+                <h5 class="product-h5">Samsung Galaxy S23 Ultra</h5>
                 <p>Rp 10.960.000</p>
-                <a href="https://tk.tokopedia.com/ZSXQJN7qM/"
-                  ><i class="fa-solid fa-store"></i> Buy on Tokopedia</a
+                <a href="https://tk.tokopedia.com/ZSXQJN7qM/">
+                  <img
+                    src="img/svg/tokopedia.svg"
+                    class="tokopedia-icon"
+                    alt="Tokopedia Icon"
+                  />
+                  Buy on Tokopedia</a
                 >
               </div>
             </div>
@@ -642,7 +675,6 @@
             </a>
 
             <a
-              id="stats"
               href="https://www.shopee.co.id/fadeljuniarakbar"
               class="btn-contact shopee"
             >
@@ -653,7 +685,7 @@
         </div>
       </section>
 
-      <div class="trust-stats">
+      <div id="stats" class="trust-stats">
         <div>
           <h3>4.8★</h3>
           <p>Rating Tokopedia</p>
@@ -791,9 +823,8 @@
     </main>
 
     <footer class="fdl-footer">
-      <h5>FDL STORE | fdlgadget.id</h5>
-
-      <p>Your Trusted Gadget Store</p>
+      <p class="footer-title">FDL STORE | fdlgadget.id</p>
+      <small>Your Trusted Gadget Store</small>
 
       <div class="footer-links">
         <a href="https://www.instagram.com/fdl_storeid" target="_blank">

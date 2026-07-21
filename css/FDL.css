@@ -13,9 +13,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family:
-    Segoe UI,
-    sans-serif;
+  font-family: "Inter", sans-serif;
   overscroll-behavior: none;
 }
 
@@ -27,7 +25,7 @@ body {
   position: fixed;
   right: 16px;
   bottom: 16px;
-  z-index: 9999;
+  z-index: 900;
 
   display: flex;
   align-items: center;
@@ -269,6 +267,10 @@ body {
   transform: translateY(-3px);
 }
 
+#stats {
+  scroll-margin-top: 90px;
+}
+
 .hero {
   height: 100vh;
   min-height: 100vh;
@@ -420,6 +422,13 @@ body {
   background: #121212;
   color: white;
 }
+.tokopedia-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-bottom: 2px;
+}
 
 .product-card {
   height: 100%;
@@ -446,8 +455,9 @@ body {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
 }
 
-.product-card img {
+.product-card > img {
   width: 100%;
+  height: auto;
   aspect-ratio: 1/1;
 
   object-fit: cover;
@@ -460,15 +470,19 @@ body {
   transform: scale(1.05);
 }
 
-.product-card h5,
+.product-h5 {
+  padding: 2px 20px;
+}
 .product-card p {
   padding: 2px 20px;
 }
 
 .product-card a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
   margin: 20px;
-  text-align: center;
   margin-top: auto;
   padding: 10px;
   text-decoration: none;
@@ -544,7 +558,7 @@ body {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-size: 70%;
+  background-size: 60%;
 
   width: 40px;
   height: 40px;
@@ -744,7 +758,9 @@ body {
   color: #aaa;
 }
 
-.fdl-footer h5 {
+.footer-title {
+  margin: 0px;
+  font-weight: bold;
   color: white;
 }
 
