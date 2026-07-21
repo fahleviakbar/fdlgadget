@@ -3,10 +3,11 @@
   --bg: #121212;
   --text: #ffffff;
   --border: #3a3a3a;
+  --wa-color: #25d366;
 }
 
 html {
-  scroll-behavior: auto;
+  scroll-behavior: smooth; /* Diubah ke smooth biar nyaman saat klik menu */
 }
 
 body {
@@ -18,34 +19,27 @@ body {
 }
 
 /* =========================
-   sticky-wa
+   STICKY WHATSAPP
 ========================= */
-
 .sticky-wa {
   position: fixed;
   right: 16px;
   bottom: 16px;
   z-index: 900;
-
   display: flex;
   align-items: center;
   gap: 8px;
-
-  background: #25d366;
+  background: var(--wa-color);
   color: white;
   padding: 12px 16px;
-  border-radius: 999px;
-
+  border-radius: 99px;
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
-
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-
   opacity: 0;
   transform: translateY(18px);
   pointer-events: none;
-
   transition:
     opacity 0.35s ease,
     transform 0.35s ease;
@@ -66,7 +60,6 @@ body {
 /* =========================
    NAVBAR
 ========================= */
-
 .navbar {
   transition: all 0.3s ease;
   padding: 0.65rem 0;
@@ -84,20 +77,15 @@ body {
 .navbar.scrolled {
   background: rgba(18, 18, 18, 0.95);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
 }
-
-/* =========================
-   LOGO
-========================= */
 
 .navbar-brand {
   display: flex;
   align-items: center;
   gap: 10px;
-
   color: white !important;
-
   font-weight: 700;
   letter-spacing: 0.5px;
 }
@@ -108,34 +96,24 @@ body {
 }
 
 /* =========================
-   DESKTOP MENU
+   DESKTOP MENU & BTN
 ========================= */
-
 .nav-link {
   position: relative;
-
   color: white !important;
-
   margin-left: 18px;
-
   font-weight: 500;
-
   transition: 0.3s;
 }
 
 .nav-link::after {
   content: "";
-
   position: absolute;
-
   bottom: -4px;
   left: 0;
-
   width: 0;
   height: 2px;
-
-  background: #714013;
-
+  background: var(--gold);
   transition: 0.3s ease;
 }
 
@@ -143,51 +121,35 @@ body {
   width: 100%;
 }
 
-/* =========================
-   WHATSAPP BUTTON
-========================= */
-
-.btn-whatsapp {
+.btn-whatsapp,
+.whatsapp-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  gap: 6px;
   height: 42px;
-
   padding: 0 1.2rem;
-
-  background: #25d366;
-
+  background: var(--wa-color);
   color: white !important;
-
-  border-radius: 999px;
-
+  border-radius: 99px;
   text-decoration: none;
-
   font-weight: 600;
-
   transition: 0.3s;
 }
 
-.btn-whatsapp:hover {
+.btn-whatsapp:hover,
+.whatsapp-btn:hover {
   transform: translateY(-2px);
-
   box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
-
   color: white !important;
 }
 
 /* =========================
-   HAMBURGER
+   MOBILE MENU (OFFCANVAS)
 ========================= */
-
 .navbar-toggler {
   border: none !important;
   outline: none !important;
-  box-shadow: none !important;
-}
-
-.navbar-toggler:focus {
   box-shadow: none !important;
 }
 
@@ -211,12 +173,8 @@ body {
   transform: rotate(90deg);
 }
 
-/* =========================
-   OFFCANVAS
-========================= */
-
 .offcanvas {
-  background: #121212;
+  background: var(--bg);
   color: white;
   width: 280px;
 }
@@ -245,28 +203,25 @@ body {
 
 .social-menu {
   display: flex;
-
   justify-content: center;
-
   gap: 24px;
-
   margin-top: 30px;
 }
 
 .social-menu a {
   color: white;
-
   font-size: 1.5rem;
-
   transition: 0.3s;
 }
 
 .social-menu a:hover {
-  color: #714013;
-
+  color: var(--gold);
   transform: translateY(-3px);
 }
 
+/* =========================
+   SECTIONS & HERO
+========================= */
 #stats {
   scroll-margin-top: 90px;
 }
@@ -276,14 +231,11 @@ body {
   min-height: 100vh;
   max-height: 100vh;
   overflow: hidden;
-
   display: flex;
   align-items: center;
-
   background-image: url("../img/webp/hero.webp");
   background-size: cover;
   background-position: center;
-
   position: relative;
 }
 
@@ -291,7 +243,6 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-
   background: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.75),
@@ -302,16 +253,11 @@ body {
 .hero-content {
   position: relative;
   z-index: 2;
-
-  height: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   max-width: 1200px;
   margin: auto;
-
   padding: 0 2rem;
 }
 
@@ -319,12 +265,10 @@ body {
   font-size: clamp(2.8rem, 8vw, 5rem);
   font-weight: 800;
   letter-spacing: 2px;
-
   text-align: center;
-
   color: var(--gold);
-
   text-shadow: 0 5px 30px rgba(113, 64, 19, 0.35);
+  margin-bottom: 0.5rem;
 }
 
 .hero-content p {
@@ -332,6 +276,7 @@ body {
   text-align: center;
   line-height: 1.8;
   opacity: 0.95;
+  margin: 0 auto;
 }
 
 .hero-buttons {
@@ -342,41 +287,43 @@ body {
   justify-content: center;
 }
 
-.btn-shop {
-  background: linear-gradient(135deg, #b8862b, #714013);
-  color: white;
-
-  padding: 0.8rem 1.5rem;
-
-  text-decoration: none;
-  border-radius: 8px;
-}
-
-.btn-hero {
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  background: rgba(37, 211, 102, 0.12);
-  backdrop-filter: blur(6px);
-  padding: 0.8rem 1.5rem;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-}
-
 .btn-shop,
 .btn-hero {
+  padding: 0.8rem 1.5rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   transition:
     transform 0.3s,
     box-shadow 0.3s,
     background 0.3s;
 }
 
+.btn-shop {
+  background: linear-gradient(135deg, #b8862b, var(--gold));
+}
+
+.btn-hero {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(37, 211, 102, 0.12);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
 .btn-shop:hover,
 .btn-hero:hover {
   transform: translateY(-3px);
-
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  color: white;
 }
 
+/* =========================
+   WHY US
+========================= */
 .why-us {
   padding: 80px 20px;
 }
@@ -384,6 +331,7 @@ body {
 .why-us h2 {
   text-align: center;
   margin-bottom: 50px;
+  font-weight: 700;
 }
 
 .why-grid {
@@ -406,44 +354,39 @@ body {
 
 .why-card:hover {
   transform: translateY(-8px);
-
-  border-color: #714013;
-
+  border-color: var(--gold);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
 }
 
 .why-card i {
   font-size: 2rem;
-  color: #714013;
+  color: var(--gold);
+  margin-bottom: 15px;
+  display: inline-block;
 }
 
+/* =========================
+   PRODUCTS
+========================= */
 .featured-product {
   padding: 80px 0;
-  background: #121212;
-  color: white;
+  background: var(--bg);
 }
-.tokopedia-icon {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-  flex-shrink: 0;
-  margin-bottom: 2px;
+
+.featured-product h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
 }
 
 .product-card {
   height: 100%;
-
   display: flex;
   flex-direction: column;
-
   background: #1b1b1b;
-
   border-radius: 18px;
-
   overflow: hidden;
-
   border: 1px solid rgba(255, 255, 255, 0.05);
-
   transition:
     transform 0.3s,
     box-shadow 0.3s;
@@ -451,7 +394,6 @@ body {
 
 .product-card:hover {
   transform: translateY(-10px);
-
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
 }
 
@@ -459,9 +401,7 @@ body {
   width: 100%;
   height: auto;
   aspect-ratio: 1/1;
-
   object-fit: cover;
-
   transition: transform 0.5s ease;
   margin-bottom: 10px;
 }
@@ -470,23 +410,35 @@ body {
   transform: scale(1.05);
 }
 
-.product-h5 {
-  padding: 2px 20px;
-}
+.product-h5,
 .product-card p {
   padding: 2px 20px;
+  margin: 0;
+}
+
+.product-h5 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.tokopedia-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .product-card a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1px;
+  gap: 8px;
   margin: 20px;
   margin-top: auto;
-  padding: 10px;
+  padding: 12px;
   text-decoration: none;
-  background: #714013;
+  background: var(--gold);
   color: white;
   border-radius: 10px;
   font-weight: 600;
@@ -495,14 +447,16 @@ body {
 
 .product-card a:hover {
   background: #8b5320;
-  text-decoration: none;
   transform: translateY(-2px);
+  color: white;
 }
 
+/* =========================
+   ABOUT & CAROUSEL
+========================= */
 .about-section {
   padding: 80px 0;
   background: #181818;
-  color: white;
 }
 
 .about-section ul {
@@ -512,11 +466,7 @@ body {
 
 .about-section li {
   margin-bottom: 10px;
-}
-
-.about-section img {
-  width: 100%;
-  border-radius: 15px;
+  font-weight: 500;
 }
 
 .about-section h2 {
@@ -532,58 +482,40 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.05);
   overflow: hidden;
   border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
 }
 
 .carousel-item {
   transition:
     transform 0.8s ease-in-out,
     opacity 0.8s ease-in-out;
-  padding: 0 10px;
-}
-
-.carousel-item.active {
-  opacity: 1;
-}
-
-.carousel-item-next,
-.carousel-item-prev {
-  opacity: 0.5;
 }
 
 .carousel-inner img {
-  height: 450px;
   width: 100%;
+  aspect-ratio: 16/10; /* Proporsional modern, menggantikan height kaku */
   object-fit: cover;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-size: 60%;
-
   width: 40px;
   height: 40px;
-
   border-radius: 50%;
-
   background-color: rgba(0, 0, 0, 0.4);
-
-  padding: 20px;
 }
 
 .carousel-indicators {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .carousel-indicators button {
-  width: 14px !important;
-  height: 14px !important;
-
+  width: 10px !important;
+  height: 10px !important;
   border-radius: 50% !important;
-
   margin: 0 5px !important;
-
   border: none !important;
-
   background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
@@ -591,19 +523,18 @@ body {
   background-color: #ffffff !important;
 }
 
-.carousel {
-  overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
-}
-
-.contact-section {
+/* =========================
+   CONTACT & CTA
+========================= */
+.contact-section,
+.cta-section {
   padding: 100px 0;
-  background: #121212;
-  color: white;
+  background: var(--bg);
+  text-align: center;
 }
 
-.contact-section h2 {
+.contact-section h2,
+.cta-section h2 {
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -621,38 +552,48 @@ body {
   border-radius: 10px;
   text-decoration: none;
   color: white;
-  border: 1px solid #714013;
+  border: 1px solid var(--gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
   transition: 0.3s;
 }
 
 .btn-contact:hover {
-  background: #714013;
+  background: var(--gold);
   color: white;
+  transform: translateY(-2px);
 }
 
+/* =========================
+   STATS & TESTIMONIAL
+========================= */
 .trust-stats {
   display: flex;
   justify-content: center;
   gap: 50px;
   margin: 40px 0;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 .trust-stats h3 {
-  color: #714013;
-  font-size: 2rem;
-  font-weight: 700;
+  color: var(--gold);
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 5px;
 }
 
 .trust-stats p {
   color: #ccc;
   margin: 0;
+  font-weight: 500;
 }
 
 .testimonial-section {
   padding: 80px 0;
-  background: #121212;
-  color: white;
+  background: var(--bg);
 }
 
 .review-subtitle {
@@ -661,13 +602,9 @@ body {
 
 .review-card {
   background: #1b1b1b;
-
   border-radius: 18px;
-
   overflow: hidden;
-
   border: 1px solid rgba(255, 255, 255, 0.05);
-
   transition:
     transform 0.3s,
     box-shadow 0.3s;
@@ -675,47 +612,38 @@ body {
 
 .review-card:hover {
   transform: translateY(-8px);
-
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
 }
 
 .review-card img {
   width: 100%;
+  height: auto;
+  object-fit: cover;
   display: block;
 }
 
-.btn-review {
-  display: inline-block;
-  padding: 12px 28px;
-  border-radius: 10px;
-  text-decoration: none;
-  color: white;
-  border: 1px solid #714013;
-  transition: 0.3s;
-}
-
-.btn-review:hover {
-  background: #714013;
-  color: white;
-}
-
+/* =========================
+   LOCATION
+========================= */
 .store-location {
   padding: 80px 0 120px 0;
   text-align: center;
 }
 
+.store-location h2 {
+  font-weight: 700;
+}
+
 .map-container {
   overflow: hidden;
-
   border-radius: 20px;
-
   border: 1px solid rgba(255, 255, 255, 0.05);
-
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  margin-top: 30px;
 }
 
 .location-buttons {
-  margin-top: 20px;
+  margin-top: 25px;
   display: flex;
   justify-content: center;
   gap: 12px;
@@ -723,33 +651,27 @@ body {
 }
 
 .location-btn {
-  background: #714013;
+  background: var(--gold);
   color: white;
   text-decoration: none;
   padding: 12px 24px;
   border-radius: 10px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   transition: 0.3s;
 }
 
 .location-btn:hover {
   background: #8b5320;
   color: white;
+  transform: translateY(-2px);
 }
 
-.whatsapp-btn {
-  background: #25d366;
-  color: white;
-  text-decoration: none;
-  padding: 12px 24px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.whatsapp-btn:hover {
-  opacity: 0.9;
-  color: white;
-}
-
+/* =========================
+   FOOTER
+========================= */
 .fdl-footer {
   padding: 60px 0;
   text-align: center;
@@ -759,37 +681,47 @@ body {
 }
 
 .footer-title {
-  margin: 0px;
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: 800;
   color: white;
+  margin-bottom: 5px;
 }
 
 .footer-links {
-  margin: 15px 0;
+  margin: 25px 0;
   display: flex;
   justify-content: center;
-  gap: 18px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .footer-links a {
-  margin: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   text-decoration: none;
-  color: #714013;
+  color: var(--gold);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
 }
 
 /* =========================
    SCROLL ANIMATION SYSTEM
 ========================= */
-
 .product-card,
 .review-card,
 .why-card {
   opacity: 0;
+  /* Filter blur dihapus untuk optimasi FPS & rendering di Mobile */
   transform: translateY(30px) scale(0.98);
-  filter: blur(6px);
-  transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-  will-change: transform, opacity, filter;
+  transition:
+    opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform, opacity;
 }
 
 .product-card.show,
@@ -797,9 +729,11 @@ body {
 .why-card.show {
   opacity: 1;
   transform: translateY(0) scale(1);
-  filter: blur(0);
 }
 
+/* =========================
+   RESPONSIVE (SINGLE MEDIA QUERY)
+========================= */
 @media (max-width: 768px) {
   .hero {
     min-height: 85vh;
@@ -815,14 +749,13 @@ body {
 
   .hero-buttons {
     flex-direction: column;
-
     width: 100%;
   }
 
   .btn-shop,
   .btn-hero {
     width: 100%;
-    text-align: center;
+    justify-content: center;
   }
 
   .trust-stats {
@@ -830,7 +763,7 @@ body {
   }
 
   .trust-stats h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .product-card {
@@ -844,14 +777,13 @@ body {
   .location-btn,
   .whatsapp-btn {
     width: 100%;
+    justify-content: center;
   }
 
   .footer-links {
-    gap: 12px;
+    gap: 15px;
   }
-}
 
-@media (max-width: 768px) {
   .about-section {
     padding: 60px 0;
   }
@@ -860,11 +792,8 @@ body {
     margin-bottom: 35px;
   }
 
-  .carousel-inner img {
-    height: 260px;
-  }
-
   .about-section h2 {
     margin-top: 10px;
+    text-align: center;
   }
 }

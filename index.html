@@ -17,9 +17,7 @@
     />
 
     <meta name="robots" content="index, follow" />
-
     <meta name="theme-color" content="#121212" />
-
     <meta name="author" content="FDL Gadget" />
 
     <link rel="canonical" href="https://fdlgadget.id" />
@@ -92,10 +90,12 @@
 
     <link rel="manifest" href="img/favicon/site.webmanifest?v=20260615" />
 
-    <!-- Icons -->
+    <!-- Icons: Diubah menjadi lazy load untuk mencegah render-blocking -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
       rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
     />
 
     <!-- Bootstrap -->
@@ -237,6 +237,7 @@
       id="stickyWa"
       href="https://wa.me/6282130297591?text=Halo%20FDL%20Gadget%20👋%0A%0ASaya%20lihat%20website%20dan%20ingin%20tanya%3A%0A-%20Ketersediaan%20stok%0A-%20Harga%20terbaru%0A-%20Rekomendasi%20sesuai%20budget%0A%0A(Sumber%3A%20Website%20FDL%20Gadget)"
       target="_blank"
+      aria-label="Chat WhatsApp FDL Gadget"
     >
       <i class="bi bi-whatsapp"></i>
       Tanya Sekarang
@@ -251,7 +252,7 @@
             src="img/webp/logo.webp"
             width="38"
             height="38"
-            alt="FDL Gadget"
+            alt="Logo FDL Gadget"
           />
           FDL STORE
         </a>
@@ -276,6 +277,7 @@
                 href="https://wa.me/6282130297591?text=Halo%20min,%20saya%20mau%20tanya%20tentang%20produk%20FDL%20Gadget"
                 target="_blank"
                 class="btn-whatsapp"
+                aria-label="Hubungi via WhatsApp"
               >
                 <i class="bi bi-whatsapp"></i>
                 WhatsApp
@@ -305,12 +307,17 @@
             src="img/webp/logo.webp"
             width="38"
             height="38"
-            alt="FDL Gadget"
+            alt="Logo FDL Gadget"
           />
           <span>FDL STORE</span>
         </div>
 
-        <button type="button" class="mobile-close" data-bs-dismiss="offcanvas">
+        <button
+          type="button"
+          class="mobile-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Tutup Menu"
+        >
           <i class="bi bi-x-lg"></i>
         </button>
       </div>
@@ -334,6 +341,7 @@
               href="https://wa.me/6282130297591?text=Halo%20min,%20saya%20mau%20tanya%20tentang%20produk%20FDL%20Gadget"
               target="_blank"
               class="btn-whatsapp"
+              aria-label="Hubungi via WhatsApp"
             >
               <i class="bi bi-whatsapp"></i>
               WhatsApp
@@ -344,15 +352,27 @@
         <hr />
 
         <div class="social-menu">
-          <a href="https://instagram.com/fdl_storeid" target="_blank">
+          <a
+            href="https://instagram.com/fdl_storeid"
+            target="_blank"
+            aria-label="Instagram"
+          >
             <i class="bi bi-instagram"></i>
           </a>
 
-          <a href="https://www.tiktok.com/@fdl_storeid" target="_blank">
+          <a
+            href="https://www.tiktok.com/@fdl_storeid"
+            target="_blank"
+            aria-label="TikTok"
+          >
             <i class="bi bi-tiktok"></i>
           </a>
 
-          <a href="https://www.tokopedia.com/fdlgadget" target="_blank">
+          <a
+            href="https://www.tokopedia.com/fdlgadget"
+            target="_blank"
+            aria-label="Tokopedia"
+          >
             <i class="bi bi-shop"></i>
           </a>
         </div>
@@ -394,25 +414,25 @@
           <div class="why-grid">
             <div class="why-card">
               <i class="bi bi-shield-check"></i>
-              <h4>Quality Checked</h4>
+              <h3>Quality Checked</h3>
               <p>Setiap unit diperiksa sebelum dijual.</p>
             </div>
 
             <div class="why-card">
               <i class="bi bi-phone"></i>
-              <h4>Produk Pilihan</h4>
+              <h3>Produk Pilihan</h3>
               <p>Smartphone, laptop, dan gadget berkualitas.</p>
             </div>
 
             <div class="why-card">
               <i class="bi bi-chat-dots"></i>
-              <h4>Fast Response</h4>
+              <h3>Fast Response</h3>
               <p>Respon cepat dan ramah.</p>
             </div>
 
             <div class="why-card">
               <i class="bi bi-star"></i>
-              <h4>Trusted Seller</h4>
+              <h3>Trusted Seller</h3>
               <p>Dipercaya banyak pelanggan.</p>
             </div>
           </div>
@@ -430,17 +450,20 @@
                 <img
                   loading="lazy"
                   src="img/webp/tokped1.webp"
-                  width="386"
-                  height="386"
+                  width="400"
+                  height="400"
                   alt="Vivo X300 Basic"
                 />
-                <h5 class="product-h5">Vivo X300 Basic</h5>
+                <h3 class="product-h5">Vivo X300 Basic</h3>
                 <p>Rp 12.860.000</p>
-                <a href="https://tk.tokopedia.com/ZSXQ1dTKv/">
+                <a
+                  href="https://tk.tokopedia.com/ZSXQ1dTKv/"
+                  aria-label="Beli Vivo X300 Basic di Tokopedia"
+                >
                   <img
                     src="img/svg/tokopedia.svg"
                     class="tokopedia-icon"
-                    alt="Tokopedia Icon"
+                    alt=""
                   />Buy on Tokopedia</a
                 >
               </div>
@@ -451,20 +474,21 @@
                 <img
                   loading="lazy"
                   src="img/webp/tokped2.webp"
-                  width="386"
-                  height="386"
+                  width="400"
+                  height="400"
                   alt="Huawei Mate XT"
                 />
-                <h5 class="product-h5">Huawei Mate XT</h5>
+                <h3 class="product-h5">Huawei Mate XT</h3>
                 <p>Rp 36.800.000</p>
                 <a
                   href="https://tk.tokopedia.com/ZSQ58M5pt/"
                   class="tokpedia-link"
+                  aria-label="Beli Huawei Mate XT di Tokopedia"
                 >
                   <img
                     src="img/svg/tokopedia.svg"
                     class="tokopedia-icon"
-                    alt="Tokopedia Icon"
+                    alt=""
                   />
                   Buy on Tokopedia</a
                 >
@@ -476,17 +500,20 @@
                 <img
                   loading="lazy"
                   src="img/webp/tokped3.webp"
-                  width="386"
-                  height="386"
+                  width="400"
+                  height="400"
                   alt="Iphone 16 Promax"
                 />
-                <h5 class="product-h5">iPhone 16 Promax</h5>
+                <h3 class="product-h5">iPhone 16 Promax</h3>
                 <p>Rp 19.160.000</p>
-                <a href="https://tk.tokopedia.com/ZSXxoBAe9/">
+                <a
+                  href="https://tk.tokopedia.com/ZSXxoBAe9/"
+                  aria-label="Beli iPhone 16 Promax di Tokopedia"
+                >
                   <img
                     src="img/svg/tokopedia.svg"
                     class="tokopedia-icon"
-                    alt="Tokopedia Icon"
+                    alt=""
                   />Buy on Tokopedia</a
                 >
               </div>
@@ -497,15 +524,20 @@
                 <img
                   loading="lazy"
                   src="img/webp/tokped4.webp"
+                  width="400"
+                  height="400"
                   alt="Samsung Galaxy S23 Ultra 1 TB"
                 />
-                <h5 class="product-h5">Samsung Galaxy S23 Ultra</h5>
+                <h3 class="product-h5">Samsung Galaxy S23 Ultra</h3>
                 <p>Rp 10.960.000</p>
-                <a href="https://tk.tokopedia.com/ZSXQJN7qM/">
+                <a
+                  href="https://tk.tokopedia.com/ZSXQJN7qM/"
+                  aria-label="Beli Samsung Galaxy S23 Ultra di Tokopedia"
+                >
                   <img
                     src="img/svg/tokopedia.svg"
                     class="tokopedia-icon"
-                    alt="Tokopedia Icon"
+                    alt=""
                   />
                   Buy on Tokopedia</a
                 >
@@ -532,6 +564,8 @@
                       loading="lazy"
                       src="img/webp/store.webp"
                       class="d-block w-100"
+                      width="600"
+                      height="400"
                       alt="FDL Gadget Store"
                     />
                   </div>
@@ -541,6 +575,8 @@
                       loading="lazy"
                       src="img/webp/store2.webp"
                       class="d-block w-100"
+                      width="600"
+                      height="400"
                       alt="FDL Gadget Display"
                     />
                   </div>
@@ -550,13 +586,14 @@
                       loading="lazy"
                       src="img/webp/store3.webp"
                       class="d-block w-100"
+                      width="600"
+                      height="400"
                       alt="FDL Gadget Activity"
                     />
                   </div>
                 </div>
 
                 <!-- Arrow -->
-
                 <button
                   class="carousel-control-prev"
                   type="button"
@@ -578,7 +615,6 @@
                 </button>
 
                 <!-- Indicator -->
-
                 <div class="carousel-indicators">
                   <button
                     type="button"
@@ -716,6 +752,9 @@
               <div class="review-card">
                 <img
                   src="img/webp/review-tokopedia-2.webp"
+                  width="674"
+                  height="304"
+                  loading="lazy"
                   alt="Google Maps Review"
                 />
               </div>
@@ -723,7 +762,13 @@
 
             <div class="col-12 col-md-4">
               <div class="review-card">
-                <img src="img/webp/review-maps-1.webp" alt="Tokopedia Review" />
+                <img
+                  src="img/webp/review-maps-1.webp"
+                  width="350"
+                  height="174"
+                  loading="lazy"
+                  alt="Maps Review"
+                />
               </div>
             </div>
 
@@ -731,6 +776,9 @@
               <div class="review-card">
                 <img
                   src="img/webp/review-tokopedia-1.webp"
+                  width="693"
+                  height="330"
+                  loading="lazy"
                   alt="Tokopedia Review"
                 />
               </div>
@@ -740,6 +788,9 @@
               <div class="review-card">
                 <img
                   src="img/webp/review-instagram-2.webp"
+                  width="341"
+                  height="535"
+                  loading="lazy"
                   alt="Instagram Review"
                 />
               </div>
@@ -749,6 +800,9 @@
               <div class="review-card">
                 <img
                   src="img/webp/review-instagram-3.webp"
+                  width="340"
+                  height="535"
+                  loading="lazy"
                   alt="Instagram Review"
                 />
               </div>
@@ -758,6 +812,9 @@
               <div class="review-card">
                 <img
                   src="img/webp/review-instagram-1.webp"
+                  width="339"
+                  height="538"
+                  loading="lazy"
                   alt="Instagram Review"
                 />
               </div>
@@ -826,13 +883,24 @@
       <p class="footer-title">FDL STORE | fdlgadget.id</p>
       <small>Your Trusted Gadget Store</small>
 
+      <!-- Menambahkan class text-light untuk memperbaiki masalah kontras -->
       <div class="footer-links">
-        <a href="https://www.instagram.com/fdl_storeid" target="_blank">
+        <a
+          href="https://www.instagram.com/fdl_storeid"
+          target="_blank"
+          class="text-light"
+          aria-label="Instagram"
+        >
           <i class="bi bi-instagram"></i>
           Instagram
         </a>
 
-        <a href="https://www.tiktok.com/@fdl_storeid" target="_blank">
+        <a
+          href="https://www.tiktok.com/@fdl_storeid"
+          target="_blank"
+          class="text-light"
+          aria-label="TikTok"
+        >
           <i class="bi bi-tiktok"></i>
           TikTok
         </a>
@@ -840,17 +908,29 @@
         <a
           href="https://wa.me/6282130297591?text=Halo%20min,%20saya%20mau%20tanya%20tentang%20produk%20FDL%20Gadget"
           target="_blank"
+          class="text-light"
+          aria-label="WhatsApp"
         >
           <i class="bi bi-whatsapp"></i>
           WhatsApp
         </a>
 
-        <a href="https://www.tokopedia.com/fdlgadget" target="_blank">
+        <a
+          href="https://www.tokopedia.com/fdlgadget"
+          target="_blank"
+          class="text-light"
+          aria-label="Tokopedia"
+        >
           <i class="bi bi-shop"></i>
           Tokopedia
         </a>
 
-        <a href="https://www.shopee.co.id/fadeljuniarakbar" target="_blank">
+        <a
+          href="https://www.shopee.co.id/fadeljuniarakbar"
+          target="_blank"
+          class="text-light"
+          aria-label="Shopee"
+        >
           <i class="bi bi-shop"></i>
           Shopee
         </a>
@@ -864,6 +944,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>
