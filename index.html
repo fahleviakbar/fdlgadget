@@ -21,7 +21,79 @@
     <meta name="author" content="FDL Gadget" />
 
     <link rel="canonical" href="https://fdlgadget.id" />
+    <style>
+      /* CRITICAL CSS: Dieksekusi instan tanpa nunggu file eksternal */
+      :root {
+        --gold: #714013;
+        --bg: #121212;
+        --text: #ffffff;
+        --border: #3a3a3a;
+        --wa-color: #25d366;
+      }
+      .navbar {
+        transition: all 0.3s ease;
+        padding: 0.65rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 999;
+      }
 
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: white !important;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .hero {
+        height: 100vh;
+        min-height: 100vh;
+        max-height: 100vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        background-image: url("../img/webp/hero.webp");
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.75),
+          rgba(0, 0, 0, 0.45)
+        );
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 2rem;
+      }
+
+      .hero-content h1 {
+        font-size: clamp(2.8rem, 8vw, 5rem);
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-align: center;
+        color: var(--gold);
+        text-shadow: 0 5px 30px rgba(113, 64, 19, 0.35);
+        margin-bottom: 0.5rem;
+      }
+    </style>
     <!-- Open Graph -->
     <meta property="og:title" content="FDL Gadget" />
     <meta
@@ -58,7 +130,6 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
       rel="stylesheet"
@@ -211,22 +282,6 @@
 
       gtag("js", new Date());
       gtag("config", "G-TDWSRQ7Y9G");
-    </script>
-
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-      (function (c, l, a, r, i, t, y) {
-        c[a] =
-          c[a] ||
-          function () {
-            (c[a].q = c[a].q || []).push(arguments);
-          };
-        t = l.createElement(r);
-        t.async = 1;
-        t.src = "https://www.clarity.ms/tag/" + i;
-        y = l.getElementsByTagName(r)[0];
-        y.parentNode.insertBefore(t, y);
-      })(window, document, "clarity", "script", "x88jceiblz");
     </script>
   </head>
 
@@ -945,5 +1000,21 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/main.js" defer></script>
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "x88jceiblz");
+    </script>
   </body>
 </html>
