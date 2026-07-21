@@ -104,25 +104,17 @@ body {
   font-size: 0.95rem;
   margin-bottom: 35px;
   display: flex;
-
   align-items: center;
-
   gap: 25px;
-
   flex-wrap: wrap;
-
   color: #777;
-
   font-size: 0.95rem;
-
   margin: 20px 0 35px;
 }
 
 .article-meta span {
   display: flex;
-
   align-items: center;
-
   gap: 8px;
 }
 
@@ -144,21 +136,15 @@ body {
 
 .article-toc {
   background: #fafafa;
-
   border: 1px solid #ececec;
-
   border-radius: 18px;
-
   padding: 28px;
-
   margin-bottom: 50px;
 }
 
 .article-toc h3 {
   margin: 0 0 18px;
-
   font-size: 1.2rem;
-
   color: #111;
 }
 
@@ -226,23 +212,16 @@ body {
 
 .faq-item {
   background: #fafafa;
-
   border: 1px solid #ececec;
-
   border-radius: 18px;
-
   padding: 25px;
-
   margin-bottom: 20px;
 }
 
 .faq-item h3 {
   margin-top: 0;
-
   margin-bottom: 12px;
-
   font-size: 1.1rem;
-
   color: #111;
 }
 
@@ -355,9 +334,7 @@ body {
 
   .article-meta {
     flex-direction: column;
-
     align-items: flex-start;
-
     gap: 12px;
   }
 
