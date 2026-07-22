@@ -633,13 +633,13 @@ html {
   align-items: center;
   gap: 6px;
   text-decoration: none;
-  color: var(--gold);
+  color: var(--gold) !important;
   font-weight: 500;
   transition: color 0.3s;
 }
 
 .footer-links a:hover {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 /* =========================

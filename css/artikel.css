@@ -107,7 +107,7 @@ body {
   align-items: center;
   gap: 25px;
   flex-wrap: wrap;
-  color: #777;
+  color: #999999;
   font-size: 0.95rem;
   margin: 20px 0 35px;
 }
@@ -142,10 +142,14 @@ body {
   margin-bottom: 50px;
 }
 
-.article-toc h3 {
+.article-toc-h2 {
   margin: 0 0 18px;
   font-size: 1.2rem;
   color: #111;
+}
+
+.article-toc li {
+  margin-bottom: 12px;
 }
 
 /* =========================
@@ -300,9 +304,12 @@ body {
 .footer-links a {
   margin: 0 10px;
   text-decoration: none;
-  color: #714013;
+  color: var(--gold) !important;
 }
 
+.footer-links a:hover {
+  color: #ffffff !important;
+}
 /* =========================
    MOBILE
 ========================= */
